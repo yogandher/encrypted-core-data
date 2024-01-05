@@ -7,12 +7,12 @@ Pod::Spec.new do |s|
     s.description   = %[
         Provides a Core Data store that encrypts all data that is persisted. Besides the initial setup, the usage is exactly the same as Core Data and can be used in existing projects that use Core Data.
     ]
-    s.homepage      = 'https://github.com/project-imas/encrypted-core-data/'
+    s.homepage      = 'https://github.com/yogandher/encrypted-core-data/'
     s.authors       = {
         'MITRE' => 'imas-proj-list@lists.mitre.org'
     }
   
-    s.source        = { :git => 'https://github.com/project-imas/encrypted-core-data.git', :tag => '3.1' }
+    s.source        = { :git => 'https://github.com/yogandher/encrypted-core-data.git' }
   
     s.frameworks    = ['CoreData', 'Security']
     s.requires_arc  = true
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     s.source_files  = 'Incremental Store/**/*.{h,m}'
     s.public_header_files   = 'Incremental Store/EncryptedStore.h'
   
-    s.dependency 'SQLCipher', '~> 3.4.0'
+    s.dependency 'SQLCipher', '~> 4.5.5'
   
     s.xcconfig      = {
         'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC -DSQLCIPHER_CRYPTO_CC'
